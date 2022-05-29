@@ -30,7 +30,6 @@ export class AppComponent implements OnInit {
   selectedDoctor?: IDoctor;
   schedules: Array<ISchedule> = new Array<ISchedule>();
   displayColumns: string[] = ['appointmentNumber', 'patientName', 'appointmentDateTime', 'appointmentType'];
-  dataSource = [...this.schedules];
 
   constructor(private http: HttpClient) { }
 

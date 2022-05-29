@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  nh-health-db:
+    image: nh-health-db
+    container_name: nh-health-db
+    build:
+      context: ./be/.data
+      dockerfile: Dockerfile
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=dbuser
+      - POSTGRES_PASSWORD=dbpassword
+      - POSTGRES_DB=nhhealthdb
+    volumes:
+      - "nhhealthdb-data:/var/lib/postgresql/data"
+  nh.health.msv:
+    image: nh-health-msv
+    container_name: nh-health-msv
+    build:
+      context: ./be
+      dockerfile: ./Dockerfile
+    ports:
+      - "5003:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - CorsAttribute_Headers=*
+      - CorsAttribute_Methods=*
+      - CorsAttribute_Origins=*
+      - AllowedHosts=*
+      - ConnectionStrings__Command=Host=nh-health-db;Database=nhhealthdb;Username=dbuser;Password=dbpassword      
+  nh-ui:
+    image: nh-ui
+    container_name: nh-ui
+    build:
+      context: ./fe/nh-ui
+      dockerfile: ./Dockerfile
+    ports:
+      - "8089:80"
+
+volumes:
+  nhhealthdb-data:

@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  nh-ui:
+    image: nh-ui
+    container_name: nh-ui
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8089:80"

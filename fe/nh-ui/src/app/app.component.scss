@@ -1,0 +1,21 @@
+.container {
+    min-height: 100%;
+    width: 100%;
+    padding-left: 5px;
+  }
+  th.mat-header-cell,
+  td.mat-cell,
+  td.mat-footer-cell {
+    border-bottom-width: 0px;
+    padding-right: 20px;
+  }
+  tr.mat-header-row {
+    background-color: rgb(22, 123, 255);
+    color: rgb(247, 235, 220); 
+    font-weight: bold;
+  }
+  mat-list-option[aria-selected="true"] {
+      background-color: rgb(22, 123, 255);
+      color: rgb(247, 235, 220); 
+      font-weight: bold;
+  }

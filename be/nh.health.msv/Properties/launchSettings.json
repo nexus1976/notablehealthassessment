@@ -1,0 +1,21 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "nh.healh.msv": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      //"applicationUrl": "https://localhost:7003",
+      "applicationUrl": "http://localhost:5003",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CorsAttribute_Headers": "*",
+        "CorsAttribute_Methods": "*",
+        "CorsAttribute_Origins": "*",
+        "AllowedHosts": "*",
+        "ConnectionStrings__Command": "Host=localhost;Database=nhhealthdb;Username=dbuser;Password=dbpassword"
+      }
+    }
+  }
+}

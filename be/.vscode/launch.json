@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/nh.healh.msv/bin/Debug/net6.0/nh.healh.msv.dll",
+            "program": "${workspaceFolder}/nh.health.msv/bin/Debug/net6.0/nh.health.msv.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/nh.healh.msv",
+            "cwd": "${workspaceFolder}/nh.health.msv",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
@@ -20,7 +20,12 @@
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "CorsAttribute_Headers": "*",
+                "CorsAttribute_Methods": "*",
+                "CorsAttribute_Origins": "*",
+                "AllowedHosts": "*",
+                "ConnectionStrings__Command": "Host=localhost;Database=nhhealthdb;Username=dbuser;Password=dbpassword"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"

@@ -12,9 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\nh.health.domain\nh.health.domain.csproj" />
-    <ProjectReference Include="..\nh.health.infrastructure.dal.command\nh.health.infrastructure.dal.command.csproj" />
-    <ProjectReference Include="..\nh.health.infrastructure.dal.read\nh.health.infrastructure.dal.read.csproj" />
+    <ProjectReference Include="../nh.health.domain\nh.health.domain.csproj" />
+    <ProjectReference Include="../nh.health.infrastructure.dal.command\nh.health.infrastructure.dal.command.csproj" />
+    <ProjectReference Include="../nh.health.infrastructure.dal.read\nh.health.infrastructure.dal.read.csproj" />
   </ItemGroup>
 
 </Project>
